@@ -21,6 +21,7 @@ print(f"                             {ten_of_board} + {five_of_melamine}=  {b} S
 
 total_expenises = a + b + board_raw_price + melamine__raw_price
 net_profit = round(profit - total_expenises, 2)
+# formating the float into a string, keeping to decimals after the comma 
 formated_net_profit = "{:.2f}".format(net_profit)
 
 
