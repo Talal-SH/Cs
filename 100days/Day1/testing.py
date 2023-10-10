@@ -1,5 +1,9 @@
-a = input('->')
-b = int(a)
-a = a.capitalize()
+a = input()
+b = input()
 
-print(type(b))
+c = a
+a = b
+b = c
+
+print(a)
+print(b)
