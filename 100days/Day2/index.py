@@ -1,8 +1,8 @@
 #from tip calculator to -->
 print('calculate board')
-board_raw_price = int(input("board's raw price? per piece\n"))
-melamine__raw_price = int(input("melamine's raw price? per board/sheet\n"))
-board_selling_price = int(input("At what price would you sell the board for?\n"))
+board_raw_price = float(input("board's raw price? per piece\n"))
+melamine__raw_price = float(input("melamine's raw price? per board/sheet\n"))
+board_selling_price = float(input("At what price would you sell the board for?\n"))
 profit = board_selling_price - board_raw_price
 print(f'Profit with nothing into consedaration: {profit}SAR')
 
@@ -20,7 +20,9 @@ print(f'Material Energy and labol cost:\n  10%% of Board price due to a higher w
 print(f"                             {ten_of_board} + {five_of_melamine}=  {b} SAR")
 
 total_expenises = a + b + board_raw_price + melamine__raw_price
-net_profit = profit - total_expenises
+net_profit = round(profit - total_expenises, 2)
+formated_net_profit = "{:.2f}".format(net_profit)
 
 
 print(f'Net profit: profit= {profit} - expinses= {total_expenises} = {net_profit} SAR')
+print(f'{formated_net_profit} SAR')
