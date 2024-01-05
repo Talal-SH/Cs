@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+<!---->
+{% block content%}
+<!-- Header-->
+<!-- Sectopn-->
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div
+      class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+    >
+      <!---->
+      <form method="POST" action="{% url 'core:register' %}">
+        {% csrf_token %}
+        <div class="mb-3">{{ forms.as_p }}</div>
+
+        <button type="submit" class="btn btn-secondary">Register</button>
+        <a class="btn btn-secondary" href="{% url 'core:login' %}">Login</a>
+      </form>
+      <!---->
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<br />
+{% endblock %}
